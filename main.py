@@ -23,7 +23,7 @@ def button_click():
         final_label.config(text="Please enter both weight and height!")
     else:
         try:
-            x = (int(weight_entry.get()) / ((int(height_entry.get())/100)**2))
+            x = (float(weight_entry.get()) / ((float(height_entry.get())/100)**2))
             if x < 18.5:
                 final_label.config(text=f"Your BMI is {round(x,2)}.\nYou are under weight!")
             elif 18.5 <= x <= 24.9:
